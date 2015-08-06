@@ -3,11 +3,11 @@ require('coin')
 
 describe('fixnum#coin') do
   it('Returns change needed in all quarters') do
-    expect((25).coin()).to(eq("1 quarter"))
+    expect(("25").coin()).to(eq("1"))
   end
 
   it('Returns change needed in quarters and dimes') do
-    expect((35).coin()).to(eq("1 quarter and 1 dime"))
+    expect(("35").coin()).to(eq(11))
   end
 
   it('Returns change needed in pennies, nickels, and dimes') do
