@@ -22,13 +22,18 @@ class String
           while remainder > 4
             nickels_needed = remainder./(5)
             remainder = remainder%5
+            pennies_needed = remainder
           end
-            # while remainder < 5
-            #   p
-          final_quarters = quarters_needed.to_s
-          final_dimes = dimes_needed.to_s
-          final_nickels = nickels_needed.to_s
-          final_quarters + final_dimes + final_nickels
+
+      final_quarters = quarters_needed.to_s
+      final_dimes = dimes_needed.to_s
+      final_nickels = nickels_needed.to_s
+      final_pennies = pennies_needed.to_s
+      if final_pennies == "0"
+        final_quarters + final_dimes + final_nickels
+      else
+        final_quarters + final_dimes + final_nickels + final_pennies
+      end
     else
       "Less than a quarter"
     end
