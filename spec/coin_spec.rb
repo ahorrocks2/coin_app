@@ -3,10 +3,16 @@ require('coin')
 
 describe('fixnum#coin') do
   it('Returns change needed in all pennies') do
-    expect((15).coin()).to(eq("15 pennies"))
+    expect((1).coin()).to(eq("1 penny"))
   end
 
   it('Returns change needed in pennies and nickels') do
-    expec((12).coin()).to(eq("2 nickels and 2 pennies"))
+    expect((6).coin()).to(eq("1 nickels and 1 penny"))
   end
+
+  it('Returns change needed in pennies, nickels, and dimes') do
+    expect((16).coin()).to(eq("1 dime, 1 nickel, and 1 penny"))
+  end
+
+  
 end
