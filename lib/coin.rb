@@ -25,7 +25,8 @@ class String
             remainder = remainder%5
           end
           final_quarters = quarters_needed.to_s
-          final_quarters
+          final_dimes = dimes_needed.to_s
+          final_quarters + final_dimes
     else
       "Less than a quarter"
     end
