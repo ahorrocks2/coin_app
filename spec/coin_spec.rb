@@ -14,5 +14,7 @@ describe('fixnum#coin') do
     expect((16).coin()).to(eq("1 dime, 1 nickel, and 1 penny"))
   end
 
-  
+  it('Returns change needed in pennies, nickels, dimes, and quarters') do
+    expect((41).coin()).to(eq("1 quarter, 1 dime, 1 nickel, and 1 penny"))
+  end
 end
