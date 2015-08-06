@@ -2,19 +2,19 @@ require('rspec')
 require('coin')
 
 describe('fixnum#coin') do
-  it('Returns change needed in all pennies') do
-    expect((1).coin()).to(eq("1 penny"))
+  it('Returns change needed in all quarters') do
+    expect((25).coin()).to(eq("1 quarter"))
   end
 
-  it('Returns change needed in pennies and nickels') do
-    expect((6).coin()).to(eq("1 nickels and 1 penny"))
+  it('Returns change needed in quarters and dimes') do
+    expect((35).coin()).to(eq("1 quarter and 1 dime"))
   end
 
   it('Returns change needed in pennies, nickels, and dimes') do
-    expect((16).coin()).to(eq("1 dime, 1 nickel, and 1 penny"))
+    expect((40).coin()).to(eq("1 quarter, 1 dime, and 1 nickel"))
   end
 
-  it('Returns change needed in pennies, nickels, dimes, and quarters') do
+  it('Returns change needed in quarters, dimes, nickels, and pennies.') do
     expect((41).coin()).to(eq("1 quarter, 1 dime, 1 nickel, and 1 penny"))
   end
 end
